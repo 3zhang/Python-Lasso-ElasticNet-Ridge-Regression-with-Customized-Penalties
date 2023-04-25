@@ -31,3 +31,6 @@ Note that $H_2 (y- X_1' \beta_1') - X_2\beta_2 = 0$ when $\beta_2 = X_2^+(y- X_1
  $$\frac{1}{2n}||(1-H_2)(y- X_1' \beta_1')||_2^2 + \alpha||\beta_1'||_1$$
 which can be solved with regular Lasso. After getting $\beta_1'$, as mentioned above, we can calculate $\beta_2 = X_2^+(y- X_1' \beta_1')$ and $\beta_1 = \beta_1' \oslash s_1$.
 
+## Acknowledgement
+The algorithm is inspired by this answer:
+https://stats.stackexchange.com/a/307133/68424
