@@ -1,8 +1,9 @@
 # Python Lasso/ElasticNet/Ridge Regression with Customized Penalties
-An extension of sklearn's Lasso/ElasticNet/Ridge model to allow users to customize the penalties of different covariates. In R this can be done by setting the penalty.factor parameter in glmnet but in python AFAIK there's no such implementation yet.
+An extension of sklearn's Lasso/ElasticNet/Ridge model to allow users to customize the penalties of different covariates. Works similar to `penalty.factor` parameter in R's glmnet.
 
 ## Introduction
 Sometimes we have prior knowledge that some covariates are important and some are not. Like weekend and holiday should be strong predictors to daily traffic flow, gender should be a strong predictor to breast cancer risk, whereas ice-cream sales should not contribute to crime rate. In such cases, when doing regularized linear regression, we want to penalize certain covariates with different weights.
+This module also allows you to do basic two-step adaptive regularized regression.
 
 ## Usage
 Two classes, CustomENet and CustomENetCV, are provided for regression and cross-validation along the regularization path. Both accept an additional penalty weight parameter for fit. See the example notebook and docstrings for details.
