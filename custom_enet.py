@@ -27,7 +27,7 @@ class CustomENet(BaseEstimator):
         possible.
     fit_intercept: 
         Set this to False if either:
-            1. X already has a constant column. In this case make sure to set the corresponding penalty to 0.
+            1. X already has a non-zero constant column. In this case make sure to set the corresponding penalty to 0.
             2. standardize = True and y is centered.
             3. standardize = False but all columns of X and y are centered.
     standardize:
