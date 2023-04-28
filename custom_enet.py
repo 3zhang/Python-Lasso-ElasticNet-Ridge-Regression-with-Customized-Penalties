@@ -26,9 +26,10 @@ class CustomENet(BaseEstimator):
         0 for Ridge, (0, 1) for ElasticNet, 1 for Lasso. Avoid (0, 0.01) if 
         possible.
     fit_intercept: 
-        If X has a constant column, set this to False but make sure 
-        to set the corresponding penalty to 0. Note that for irregular 
-        penalties, centering y is often not sufficient to exclude the intercept. 
+        Set this to False if either:
+            1. X already has a constant column. In this case make sure to set the corresponding penalty to 0.
+            2. standardize = True and y is centered.
+            3. standardize = False but all columns of X and y are centered.
     standardize:
         Whether to standardize X before fit. Only covariates with finite positive 
         penalties will be standardized.
