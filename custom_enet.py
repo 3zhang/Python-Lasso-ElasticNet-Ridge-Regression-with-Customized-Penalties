@@ -37,7 +37,10 @@ class CustomENet(BaseEstimator):
     Attributes
     ----------
     w:
-        Regression coefficients. If fit_intercept=True, w[-1] is the intercept.
+        Regression coefficients. If fit_intercept=True, w[-1] is the intercept. 
+        Note that when standardize=True, the coefficients are based on X after 
+        standardization. You may want to check x_scaler attr if you want to 
+        recover the raw linear relationship.
     model:
         Sklearn's model used in the algorithm. Note this is an intermediate model
         and should not be used for prediction.
@@ -216,7 +219,9 @@ class CustomENetCV:
         Alpha correspondng to to the minimum CV error.
     w:
         Only for refit=True. Regression coefficients. If fit_intercept=True, 
-        w[-1] is the intercept.
+        w[-1] is the intercept. Note that when standardize=True, the coefficients 
+        are based on X after standardization. You may want to check x_scaler attr 
+        if you want to recover the raw linear relationship.
     model_best:
         Only for refit=True. Sklearn's model used in the algorithm. Note this 
         is an intermediate model and should not be used for prediction.
